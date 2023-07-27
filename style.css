@@ -1,0 +1,14 @@
+.dice{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dice .player{
+    display:flex;
+}
+.dice .dice_img{
+    display:flex;
+}
+.dice .dice_img img{
+    width:400px;
+}
