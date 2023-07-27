@@ -1,3 +1,16 @@
+var randomDice = (Math.floor(Math.random()*6) + 1);
+document.querySelector("img").setAttribute("src","./images/dice" + randomDice + ".jpg");
+var randomDicee = (Math.floor(Math.random()*6) + 1);
+document.querySelector(".dice_img").lastElementChild.setAttribute("src","./images/dice"+randomDicee+".jpg");
+if(randomDice > randomDicee){
+    document.querySelector("h1").textContent = "player 1 Wins";
+}
+else if(randomDicee > randomDice){
+    document.querySelector("h1").textContent = "Player 2 Wins";
+}
+else{
+    document.querySelector("h1").textContent = "Draw ! Refresh Me !";
+}
 const https = require("https");
 const app = express();
 const bodyParser = require("body-parser");
@@ -14,16 +27,3 @@ app.listen(process.env.PORT || 3000, function(){
 
 
 
-var randomDice = (Math.floor(Math.random()*6) + 1);
-document.querySelector("img").setAttribute("src","./images/dice" + randomDice + ".jpg");
-var randomDicee = (Math.floor(Math.random()*6) + 1);
-document.querySelector(".dice_img").lastElementChild.setAttribute("src","./images/dice"+randomDicee+".jpg");
-if(randomDice > randomDicee){
-    document.querySelector("h1").textContent = "player 1 Wins";
-}
-else if(randomDicee > randomDice){
-    document.querySelector("h1").textContent = "Player 2 Wins";
-}
-else{
-    document.querySelector("h1").textContent = "Draw ! Refresh Me !";
-}
